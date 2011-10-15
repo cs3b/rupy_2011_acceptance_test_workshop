@@ -32,6 +32,7 @@ It should looks like this...
     gem "rspec-rails", '>= 2.5.0'
     gem 'spork', '>= 0.9.0.rc9'
     gem 'steak'
+    gem 'selenium-webdriver'
   end
 
 And run

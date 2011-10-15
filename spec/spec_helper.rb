@@ -1,3 +1,42 @@
+require 'rubygems'
+require 'spork'
+
+Spork.prefork do
+  # Loading more in this block will cause your tests to run faster. However,
+  # if you change any configuration or code from libraries loaded here, you'll
+  # need to restart spork for it take effect.
+  ENV["RAILS_ENV"] ||= 'test'
+  require File.expand_path("../../config/environment", __FILE__)
+  require 'rspec/rails'
+  require "steak"
+  require 'capybara/rspec'
+  require 'capybara/rails'
+  require 'selenium-webdriver'
+  require 'rspec/core/expecting/with_rspec'
+  require 'rspec/core/formatters/base_text_formatter'
+  require 'rspec/core/formatters/progress_formatter'
+  require 'active_record/connection_adapters/postgresql_adapter'
+  require 'erb'
+  require 'uri'
+  require 'rack'
+  require 'capybara/util/timeout'
+  require 'selenium/webdriver/firefox/util'
+  require 'selenium/webdriver/firefox/extension'
+  require 'selenium/webdriver/firefox/socket_lock'
+  require 'selenium/webdriver/firefox/binary'
+  require 'selenium/webdriver/firefox/profiles_ini'
+  require 'selenium/webdriver/firefox/profile'
+  require 'selenium/webdriver/firefox/launcher'
+  require 'selenium/webdriver/firefox/bridge'
+  require 'net/http'
+  require 'digest/sha2'
+  require 'rake'
+end
+
+Spork.each_run do
+  Capybara.current_driver = :selenium
+end
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
