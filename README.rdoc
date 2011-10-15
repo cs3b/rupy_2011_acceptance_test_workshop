@@ -6,6 +6,10 @@ Use/install Ruby 1.9.2 version and create gemset `rupy`
 Clone rpository
   git clone https://github.com/cs3b/rupy_2011_acceptance_test_workshop.git
   cd rupy_2011_acceptance_test_workshop
+Install bundler
+  gem install bundler
+Install required gems
+  bundle install
 Copy and configure your database file
   cp config/database.yml.example config/database.yml
 Create / migrate / seed for developement and test environment
@@ -15,3 +19,23 @@ Create / migrate / seed for developement and test environment
 
   RAILS_ENV=test rake db:migrate
   RAILS_ENV=test rake db:seed
+
+Add the following gems into Gemfile to test group.
+It should looks like this...
+
+  group :test do
+    gem 'capistrano'
+    gem 'capybara'
+    gem 'xpath'
+    gem 'rspec', '>= 2.5.0'
+    gem 'rspec-core', '2.5.1'
+    gem "rspec-rails", '>= 2.5.0'
+    gem 'spork', '>= 0.9.0.rc9'
+    gem 'steak'
+  end
+
+And run
+  bundle install
+
+Install Rspec
+  rails g rspec:install

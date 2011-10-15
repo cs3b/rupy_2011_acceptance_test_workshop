@@ -19,6 +19,13 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'capistrano'
+  gem 'capybara'
+  gem 'xpath'
+  gem 'rspec', '>= 2.5.0'
+  gem 'rspec-core', '2.5.1'
+  gem "rspec-rails", '>= 2.5.0'
+  gem 'spork', '>= 0.9.0.rc9'
+  gem 'steak'
 end
 
 group :production do
