@@ -1,0 +1,17 @@
+Application Setup
+
+Use/install Ruby 1.9.2 version and create gemset `rupy`
+  rvm use 1.9.2
+  rvm gemset create 1.9.2@rupy
+Clone rpository
+  git clone https://github.com/cs3b/rupy_2011_acceptance_test_workshop.git
+  cd rupy_2011_acceptance_test_workshop
+Copy and configure your database file
+  cp config/database.yml.example config/database.yml
+Create / migrate / seed for developement and test environment
+  rake db:create:all
+  rake db:migrate
+  rake db:seed
+
+  RAILS_ENV=test rake db:migrate
+  RAILS_ENV=test rake db:seed

@@ -17,6 +17,6 @@ Taxonomy.create(:name => 'Categories')
 
 # Products
 
-%w(gruszka jabłko cytryna maliny pomarańcza).each do |fruit|
+%w(pinaple apple lemon raspberries orange).each do |fruit|
   Product.create(:name => fruit, :available_on => Time.now-12.hours, :description => '', :price => rand(12)+3)
 end
