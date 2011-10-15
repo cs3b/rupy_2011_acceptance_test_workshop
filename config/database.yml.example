@@ -1,13 +1,15 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
 development:
   adapter: postgresql
   encoding: unicode
-  #database: metreno_development
-  database: spree_development2
+  database: spree_development
   pool: 5
-  username: bard
-  password: ro0t5
+  username: username
+  password: password
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: spree_test
+  pool: 5
+  username: username
+  password: password
