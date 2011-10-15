@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'spree', :git => 'git://github.com/spree/spree.git', :branch => '0-70-stable'
+gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
 
 gem 'pg'
 gem 'json'

@@ -9,3 +9,14 @@
 
 SpreeCore::Engine.load_seed if defined?(SpreeCore)
 SpreeAuth::Engine.load_seed if defined?(SpreeAuth)
+
+
+# Taxonomies
+
+Taxonomy.create(:name => 'Categories')
+
+# Products
+
+%w(gruszka jabłko cytryna maliny pomarańcza).each do |fruit|
+  Product.create(:name => fruit, :available_on => Time.now-12.hours, :description => '', :price => rand(12)+3)
+end

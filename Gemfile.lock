@@ -41,6 +41,12 @@ GIT
     spree_sample (0.70.0)
       spree_core (= 0.70.0)
 
+GIT
+  remote: git://github.com/spree/spree_rdr_theme.git
+  revision: 263a0a4ccf7a10b65c21aed2dd885260f40464dc
+  specs:
+    spree_rdr_theme (0.1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -235,6 +241,7 @@ DEPENDENCIES
   rails (= 3.1.1)
   sass-rails (~> 3.1.4)
   spree!
+  spree_rdr_theme!
   therubyracer
   uglifier (>= 1.0.3)
   unicorn
