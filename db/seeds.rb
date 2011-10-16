@@ -15,8 +15,11 @@ SpreeAuth::Engine.load_seed if defined?(SpreeAuth)
 
 Taxonomy.create(:name => 'Categories')
 
+
+if Rails.env == 'development'
 # Products
 
-%w(pinaple apple lemon raspberries orange).each do |fruit|
-  Product.create(:name => fruit, :available_on => Time.now-12.hours, :description => '', :price => rand(12)+3)
+  %w(pinaple apple lemon raspberries orange).each do |fruit|
+    Product.create(:name => fruit, :available_on => Time.now-12.hours, :description => '', :price => rand(12)+3)
+  end
 end
