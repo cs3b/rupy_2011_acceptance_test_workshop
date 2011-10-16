@@ -1,5 +1,12 @@
 require 'spec_helper'
 
+#  Customer should be able to buy product from products catalogue. 
+#  To accomplish transaction, customer should proceed from cart to checkout, 
+#  create new or log into existing account, supply shipping information and 
+#  information regarding payments. The transaction can be treated as accomplished 
+#  when payment has been registered in the system and merchandise has been shipped 
+#  to the customer. The main value of this functionality is revenue generation.
+
 feature "Order fruits" do
 
   background do
