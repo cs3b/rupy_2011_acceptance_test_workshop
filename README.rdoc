@@ -6,6 +6,7 @@ Use/install Ruby 1.9.2 version and create gemset `rupy`
 Clone rpository
   git clone https://github.com/cs3b/rupy_2011_acceptance_test_workshop.git
   cd rupy_2011_acceptance_test_workshop
+  bundle install
 Copy and configure your database file
   cp config/database.yml.example config/database.yml
 Create / migrate / seed for developement and test environment
