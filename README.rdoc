@@ -20,23 +20,18 @@ Create / migrate / seed for developement and test environment
   RAILS_ENV=test rake db:migrate
   RAILS_ENV=test rake db:seed
 
-Add the following gems into Gemfile to test group.
-It should looks like this...
+== Exercise 2
 
-  group :test do
-    gem 'capistrano'
-    gem 'capybara'
-    gem 'xpath'
-    gem 'rspec', '>= 2.5.0'
-    gem 'rspec-core', '2.5.1'
-    gem "rspec-rails", '>= 2.5.0'
-    gem 'spork', '>= 0.9.0.rc9'
-    gem 'steak'
-    gem 'selenium-webdriver'
-  end
+  https://github.com/cs3b/rupy_2011_acceptance_test_workshop/compare/master...ex-1#diff-3
 
-And run
-  bundle install
+== Exercise 3
 
-Install Rspec
-  rails g rspec:install
+  https://github.com/cs3b/rupy_2011_acceptance_test_workshop/compare/master...ex-1#diff-4
+
+== Exercise 4
+
+  https://github.com/cs3b/rupy_2011_acceptance_test_workshop/compare/ex-1...ex-2
+
+== Exercise 5
+
+  (...)
