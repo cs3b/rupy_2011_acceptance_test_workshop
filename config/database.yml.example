@@ -6,7 +6,7 @@ development:
   username: username
   password: password
 
-development:
+test:
   adapter: postgresql
   encoding: unicode
   database: spree_test
