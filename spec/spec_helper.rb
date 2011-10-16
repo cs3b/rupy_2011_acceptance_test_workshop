@@ -35,6 +35,9 @@ end
 
 Spork.each_run do
   Capybara.current_driver = :selenium
+  %w(pinaple apple lemon raspberries orange).each do |fruit|
+    Product.create(:name => fruit, :available_on => Time.now-12.hours, :description => '', :price => rand(12)+3)
+  end
 end
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
